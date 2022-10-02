@@ -9,18 +9,16 @@
 	/* display: grid; */
 	display: flex;
 	grid-template-columns: repeat(3fr);
-	border: solid;
-	border-color: red;
 }
 .right-wrapper {
 	display: flex;
 	align-items: left;
 	justify-content: center;
 	flex-flow: column wrap;
-	border: solid;
-	border-color: green;
-	height: 95vh;
 
+	height: 98vh;
+	/* padding-left: 34px; */
+	/* margin-left: 34px; */
 	/* display: flex; */
 }
 .left-wrapper {
@@ -28,7 +26,7 @@
 	/* align-items: center; */
 	justify-content: center;
 
-	height: 95vh;
+	height: 98vh;
 	width: 541px;
 	background-image: url("media/OdinProject4Background.avif");
 }
@@ -52,10 +50,50 @@
 	border-bottom: 4px solid #ffe9ff;
 	border-color: aliceblue;
 }
-.description {
-	font-family: ;
+.row {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/* grid-auto-columns: auto; */
+	/* display: flex; */
+	/* flex-flow: column wrap; */
+	background-color: #6c577a;
+	font-size: large;
+	padding-left: 20px;
+}
+h3 {
+	background-color: #6c577a;
+}
+.description > * {
 	font-size: 24px;
 	color: #ffe9ff;
-	/* border: solid;
-	border-color: aliceblue; */
+}
+label {
+	background-color: #6c577a;
+	font-size: 15px;
+}
+input {
+	background-color: white;
+	border-radius: 5px;
+	color: #1b1701;
+	/* outline: #de06de; */
+	width: 400px;
+	height: 40px;
+	border-radius: 5px;
+	font-size: 20px;
+	/* margin-bottom: 20px; */
+}
+input:focus {
+	background-color: #ffe9ff;
+	outline: none;
+}
+button {
+	background-color: #ffe9ff;
+	color: black;
+	font-size: 24px;
+	border-radius: 20px;
+	height: 75px;
+	width: 250px;
+	/* padding-left: 20px; */
+	/* margin: 20px; */
+	margin-left: 20px;
 }
