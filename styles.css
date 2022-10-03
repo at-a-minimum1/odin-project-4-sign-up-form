@@ -6,28 +6,21 @@
 	font-family: Inter;
 }
 .desktop-wrapper {
-	/* display: grid; */
 	display: flex;
 	grid-template-columns: repeat(3fr);
 }
 .right-wrapper {
-	display: flex;
-	align-items: left;
-	justify-content: center;
-	flex-flow: column wrap;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 
 	height: 98vh;
-	/* padding-left: 34px; */
-	/* margin-left: 34px; */
-	/* display: flex; */
 }
 .left-wrapper {
 	display: flex;
-	/* align-items: center; */
 	justify-content: center;
 
 	height: 98vh;
-	width: 541px;
+	width: 741px;
 	background-image: url("media/OdinProject4Background.avif");
 }
 .banner {
@@ -41,27 +34,34 @@
 	width: 100%;
 }
 .form-wrap {
-	/* display: flex; */
-	/* flex-flow: row wrap; */
+	grid-column: span 2;
 	height: 300px;
 	background-color: #6c577a;
 	width: 100%;
 	border-top: 4px solid #ffe9ff;
 	border-bottom: 4px solid #ffe9ff;
-	border-color: aliceblue;
+	padding-bottom: 2%;
+	margin-bottom: -4%;
 }
 .row {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	/* grid-auto-columns: auto; */
-	/* display: flex; */
-	/* flex-flow: column wrap; */
 	background-color: #6c577a;
 	font-size: large;
-	padding-left: 20px;
+	padding-left: 30px;
 }
 h3 {
 	background-color: #6c577a;
+	padding-left: 2%;
+}
+.description {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	padding-left: 4%;
+	margin-top: 10%;
+	font-size: 22px;
 }
 .description > * {
 	font-size: 24px;
@@ -75,12 +75,10 @@ input {
 	background-color: white;
 	border-radius: 5px;
 	color: #1b1701;
-	/* outline: #de06de; */
 	width: 400px;
 	height: 40px;
 	border-radius: 5px;
 	font-size: 20px;
-	/* margin-bottom: 20px; */
 }
 input:focus {
 	background-color: #ffe9ff;
@@ -93,7 +91,22 @@ button {
 	border-radius: 20px;
 	height: 75px;
 	width: 250px;
-	/* padding-left: 20px; */
-	/* margin: 20px; */
-	margin-left: 20px;
+}
+
+.call-to-action {
+	display: flex;
+	align-items: flex-start;
+	justify-content: left;
+	flex-flow: column wrap;
+	margin-left: 4%;
+}
+a {
+	color: #ffbcff;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+button:hover {
+	background-color: #ffbcff;
 }
