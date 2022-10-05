@@ -7,7 +7,7 @@
 }
 .desktop-wrapper {
 	display: flex;
-	grid-template-columns: repeat(3fr);
+	grid-template-columns: repeat(3, 1fr);
 }
 .right-wrapper {
 	display: grid;
@@ -35,13 +35,14 @@
 }
 .form-wrap {
 	grid-column: span 2;
-	height: 300px;
+	height: 60%;
 	background-color: #6c577a;
 	width: 100%;
 	border-top: 4px solid #ffe9ff;
 	border-bottom: 4px solid #ffe9ff;
 	padding-bottom: 2%;
 	margin-bottom: -4%;
+	margin-top: -10%;
 }
 .row {
 	display: grid;
@@ -62,6 +63,7 @@ h3 {
 	padding-left: 4%;
 	margin-top: 10%;
 	font-size: 22px;
+	margin-bottom: 40px;
 }
 .description > * {
 	font-size: 24px;
@@ -94,11 +96,12 @@ button {
 }
 
 .call-to-action {
+	margin-top: 70px;
 	display: flex;
 	align-items: flex-start;
 	justify-content: left;
 	flex-flow: column wrap;
-	margin-left: 4%;
+	margin-left: 2%;
 }
 a {
 	color: #ffbcff;
@@ -109,4 +112,11 @@ a:hover {
 }
 button:hover {
 	background-color: #ffbcff;
+}
+#error-div {
+	background-color: #6c577a;
+	color: rgb(255, 255, 0);
+	font-size: 20px;
+	padding-left: 1%;
+	padding-bottom: 2%;
 }
