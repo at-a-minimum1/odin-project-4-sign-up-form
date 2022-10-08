@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Project Sign Up Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="desktop-wrapper">
+        <div class="left-wrapper">
+            <div class="banner">
+                <img src="media/odin-lined.png" alt="" id="logo" />
+                Odin
+            </div>
+        </div>
+        <div class="right-wrapper">
+            <div class="description">
+                This is not a real online service! You know you need something like
+                this in you realize your deepest dreams. Sign up now to get started.<br> <br>
+                You know you want to.
+            </div>
+            <div></div>
+            <div class="form-wrap">
+                <h3>Let's do this!</h3>
+                <!-- Name inputs -->
+                <div class="row">
+                    <label for="fname">FIRST NAME</label>
+                    <label for="lname">LAST NAME</label>
+
+                    <input type="text" name="fname" id="fname" />
+                    <input type="text" name="lname" id="lname" />
+
+
+                </div>
+                <div class="row">
+                    <div class="fname-error" id="error-div"></div>
+                    <div class="lname-error" id="error-div"></div>
+                </div>
+
+                <!-- Number & email -->
+                <div class="row">
+                    <label for="email">EMAIL</label>
+                    <label for="phone">PHONE NUMBER</label>
+
+                    <input type="text" name="email" id="email" />
+                    <input type="text" name="phone" id="phone" />
+
+
+                </div>
+                <div class="row">
+                    <div class="email-error" id="error-div"></div>
+                    <div class="pnumber-error" id="error-div"></div>
+                </div>
+
+                <!-- Password -->
+                <div class="row">
+                    <label for="password">PASSWORD</label>
+                    <label for="confirm-password">CONFIRM PASSWORD</label>
+                    <input type="password" name="password" id="password" />
+                    <input type="password" name="confirm-password" id="confirm-password" />
+                    <div id="error-div"></div>
+                </div>
+
+                <div class="call-to-action">
+
+                    <button id="createBtn">Create Account</button>
+                    <pre>Already have an account?  <a href="">Log in</a> </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
