@@ -13,6 +13,11 @@
 	/* border: dashed 2px; */
 	/* border-color: red; */
 }
+.error-message {
+	background-color: #6c577a;
+	font-size: 20px;
+	color: yellow;
+}
 .desktop-wrap {
 	display: grid;
 	grid-template-columns: 50vh repeat(2, 1fr);
@@ -61,6 +66,7 @@ em {
 .form-wrap {
 	display: flex;
 	flex-flow: column wrap;
+	justify-content: center;
 	min-height: 40vh;
 	max-height: max-content;
 	background-color: #6c577a;
@@ -68,8 +74,7 @@ em {
 	border-top: 4px solid #ffe9ff;
 	border-bottom: 4px solid #ffe9ff;
 	padding-left: 4%;
-	/* padding-bottom: 2%;
-	margin-bottom: -4%; */
+	padding-bottom: 2%;
 }
 .form-wrap > * {
 	background-color: #6c577a;
@@ -106,13 +111,13 @@ a:hover {
 	text-decoration: underline;
 }
 .error {
-	background-color: red;
+	background-color: #fe4a32;
 }
 .row {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	font-size: large;
-	padding-bottom: 0.5%;
+	padding-bottom: 2px;
 }
 label {
 	background-color: #6c577a;
@@ -134,4 +139,7 @@ input:focus {
 	padding-bottom: 2%;
 	background-color: #6c577a;
 	color: yellow;
+}
+.error {
+	background-color: red;
 }

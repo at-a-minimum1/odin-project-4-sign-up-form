@@ -5,21 +5,49 @@ const phone = document.getElementById("phone");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-password");
 const createBtn = document.getElementById("createBtn");
-const errorDiv = document.getElementById("error-div");
+// const errorDiv = document.getElementById("error-div");
 
-function formError() {
-	if (password != confirmPassword) {
-		const error = document.createTextNode("Passwords do not match");
-		password.appendChild(error);
-		confirmPassword.appendChild(error);
+//
+
+const setError = (e, message) => {
+	if (e.classList.contains("error")) {
+		return;
 	}
-}
+	if (e.classList.contains("success")) {
+	}
+	const errorDisplay = document.createElement("div");
+	errorDisplay.classList.add("error-message");
+	const input = e.parentElement;
+	input.appendChild(errorDisplay);
+	errorDisplay.innerText = message;
+	e.classList.add("error");
+};
+const setSuccess = (e) => {
+	e.classList.remove("error");
+	e.classList.add("success");
+};
 
 createBtn.addEventListener("click", (e) => {
 	e.preventDefault();
 	if (password.value != confirmPassword.value) {
-		errorDiv.innerText = "Passwords do not match";
-		password.style.backgroundColor = "red";
-		confirmPassword.style.backgroundColor = "red";
+		setError(confirmPassword, "Password do not match");
+	}
+	if (fname.value == "") {
+		setError(fname, "Please enter a first name");
+	}
+	if (lname.value == "") {
+		setError(lname, "Please enter a last name");
+	}
+	if (email.value == "") {
+		setError(email, "Please enter a valid email address");
+	}
+	if (phone.value == "") {
+		setError(phone, "Please enter a phone number");
+	}
+	if (password.value == "") {
+		setError(password, "Please enter a password");
+	}
+	if (confirmPassword.value == "") {
+		setError(confirmPassword, "Please confirm your password");
 	}
 });
