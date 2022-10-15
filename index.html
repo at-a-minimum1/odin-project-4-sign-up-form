@@ -9,7 +9,6 @@
 	</head>
 	<body>
 		<div class="desktop-wrap">
-			<!-- Make the image wrap in absolute positioning so it'll be outside of the grid rules. -->
 			<div class="img-wrap border"></div>
 			<div class="logo-wrap border">
 				<img
@@ -29,7 +28,6 @@
 			</div>
 			<div class="top-right-empty border"></div>
 			<div class="middle-left-empty border"></div>
-			<!-- Span the form wrap two columns -->
 			<div class="form-wrap border border col-span-2">
 				<h3>Let's do this!</h3>
 				<!-- Name inputs -->
@@ -39,10 +37,8 @@
 
 					<input type="text" name="fname" id="fname" />
 					<input type="text" name="lname" id="lname" />
-				</div>
-				<div class="row">
-					<!-- <div class="fname-error" id="error-div"></div> -->
-					<!-- <div class="lname-error" id="error-div"></div> -->
+					<div class="error-message" id="fnameError"></div>
+					<div class="error-message" id="lnameError"></div>
 				</div>
 
 				<!-- Number & email -->
@@ -52,10 +48,8 @@
 
 					<input type="text" name="email" id="email" />
 					<input type="text" name="phone" id="phone" maxlength="13" />
-				</div>
-				<div class="row">
-					<!-- <div class="email-error" id="error-div"></div> -->
-					<!-- <div class="pnumber-error" id="error-div"></div> -->
+					<div class="error-message" id="emailError"></div>
+					<div class="error-message" id="phoneError"></div>
 				</div>
 
 				<!-- Password -->
@@ -68,12 +62,15 @@
 						name="confirm-password"
 						id="confirm-password"
 					/>
-					<!-- <div id="error-div"></div> -->
+					<div class="error-message" id="passwordError"></div>
+					<div class="error-message" id="confirmPasswordError"></div>
 				</div>
 			</div>
 			<div class="bottom-left-empty border"></div>
 			<div class="call-to-action-wrap border">
-				<button id="createBtn">Create Account</button> <br />
+				<button id="createBtn">Create Account</button>
+
+				<br />
 				Already have an account? <a href="">Log in</a>
 			</div>
 		</div>

@@ -9,10 +9,6 @@
 .col-span-2 {
 	grid-column: span 2;
 }
-.border {
-	/* border: dashed 2px; */
-	/* border-color: red; */
-}
 .error-message {
 	background-color: #6c577a;
 	font-size: 20px;
@@ -51,7 +47,7 @@
 	justify-content: flex-end;
 	flex-flow: column wrap;
 	padding-left: 8%;
-	padding-bottom: 6%;
+	padding-bottom: 3%;
 	font-size: 21px;
 	color: #ffe9ff;
 }
@@ -67,7 +63,7 @@ em {
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: center;
-	min-height: 40vh;
+	min-height: 30vh;
 	max-height: max-content;
 	background-color: #6c577a;
 	width: 96.5%;
@@ -111,7 +107,7 @@ a:hover {
 	text-decoration: underline;
 }
 .error {
-	background-color: #fe4a32;
+	background-color: #ff1e00;
 }
 .row {
 	display: grid;
@@ -139,7 +135,4 @@ input:focus {
 	padding-bottom: 2%;
 	background-color: #6c577a;
 	color: yellow;
-}
-.error {
-	background-color: red;
 }

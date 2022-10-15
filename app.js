@@ -4,50 +4,67 @@ const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-password");
+// Error messages
+const errorFname = document.getElementById("fnameError");
+const errorLname = document.getElementById("lnameError");
+const errorEmail = document.getElementById("emailError");
+const errorPhone = document.getElementById("phoneError");
+const errorPassword = document.getElementById("passwordError");
+const errorConfirmPassword = document.getElementById("confirmPasswordError");
 const createBtn = document.getElementById("createBtn");
-// const errorDiv = document.getElementById("error-div");
 
-//
-
-const setError = (e, message) => {
-	if (e.classList.contains("error")) {
-		return;
-	}
-	if (e.classList.contains("success")) {
-	}
-	const errorDisplay = document.createElement("div");
-	errorDisplay.classList.add("error-message");
-	const input = e.parentElement;
-	input.appendChild(errorDisplay);
-	errorDisplay.innerText = message;
-	e.classList.add("error");
+const clearErrors = () => {
+	const errorList = document.querySelectorAll(".error-message");
+	const inputs = document.querySelectorAll(".error");
+	errorList.forEach(function clearErrors(e) {
+		e.innerText = "";
+	});
+	inputs.forEach(function clearErrorStyle(e) {
+		e.classList.remove("error");
+	});
 };
-const setSuccess = (e) => {
-	e.classList.remove("error");
-	e.classList.add("success");
+
+const loginSuccess = () => {
+	const inputs = document.querySelectorAll(".error");
+	if (inputs.length == 0) {
+		alert("Login Successful");
+	}
 };
 
 createBtn.addEventListener("click", (e) => {
 	e.preventDefault();
-	if (password.value != confirmPassword.value) {
-		setError(confirmPassword, "Password do not match");
-	}
+	clearErrors();
 	if (fname.value == "") {
-		setError(fname, "Please enter a first name");
+		errorFname.innerText = "-Please enter your first name.";
+		fname.classList.add("error");
 	}
 	if (lname.value == "") {
-		setError(lname, "Please enter a last name");
+		errorLname.innerText = "-Please enter your last name.";
+		lname.classList.add("error");
 	}
-	if (email.value == "") {
-		setError(email, "Please enter a valid email address");
+	if (email.value == "" || !email.value.includes("@")) {
+		errorEmail.innerText = "-Please enter a valid email address.";
+		email.classList.add("error");
 	}
-	if (phone.value == "") {
-		setError(phone, "Please enter a phone number");
+	let phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+	if (phone.value == "" || !phone.value.match(phoneRegex)) {
+		errorPhone.innerText = "-Please enter a valid phone number.";
+		phone.classList.add("error");
 	}
 	if (password.value == "") {
-		setError(password, "Please enter a password");
+		errorPassword.innerText = "-Please enter your password.";
+		password.classList.add("error");
 	}
 	if (confirmPassword.value == "") {
-		setError(confirmPassword, "Please confirm your password");
+		errorConfirmPassword.innerText = "-Please confirm your password";
+		confirmPassword.classList.add("error");
 	}
+	if (password.value != confirmPassword.value) {
+		errorPassword.innerText = "-Passwords do not match.";
+		password.classList.add("error");
+		confirmPassword.classList.add("error");
+	}
+
+	loginSuccess();
 });
